@@ -1,0 +1,16 @@
+# Makefile_8916 -- build NetMessenger
+# make -f Makefile_8916          
+# make -f Makefile_8916 clean    
+CC = gcc
+CFLAGS = -Wall -Wextra -pthread
+
+all: server_8916 client_8916
+
+server_8916: server_8916.c
+	$(CC) $(CFLAGS) -o $@ $<
+
+client_8916: client_8916.c
+	$(CC) $(CFLAGS) -o $@ $<
+
+clean:
+	rm -f server_8916 client_8916
